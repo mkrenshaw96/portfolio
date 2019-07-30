@@ -13,7 +13,7 @@
 }
 
 #head-wrapper{
-    width: 100vw;
+    width: 100%;
     display: flex;
     margin: 5vh auto;
     flex-direction: column;
@@ -47,7 +47,7 @@
 
 /* SKILLZ */
 #skills-wrapper{
-    width: 80vw;
+    width: 80%;
     display: flex;
     margin:auto;
     justify-content: space-between;
@@ -77,7 +77,7 @@ li{
 
 /* PROJECTS */
 .project-wrapper{
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +98,7 @@ li{
     justify-content: center;
     align-items: center;
     font-size: .9rem;
-    width: 60vw;
+    width: 60%;
     text-align: center;
 }
 .bold-desc{
@@ -113,7 +113,7 @@ li{
 
 @media (min-width: 768px){
     .project-wrapper{
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -140,4 +140,11 @@ body {
 }
 a:hover{
     text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    #cont{
+        max-width: 1200px;
+        margin:auto;
+    }
 }

@@ -10,13 +10,7 @@
     align-items: center;
     font-family: 'Jura', sans-serif;
     font-weight: 500;
-    /* transform: translate3d(0, 0, 400px) rotateY(-40deg);
-    opacity: 1;
-    transition: 2.5s all ease; */
 }
-/* .logo.hidden{
-    opacity: 0;
-} */
 
 #head-wrapper{
     width: 100vw;
@@ -46,7 +40,7 @@
         font-size: 2.5rem;
         font-family: 'Jura', sans-serif;
         font-weight: 500;
-        margin: 15vh 0vh;
+        margin: 21vh 0vh;
     }
      
 }

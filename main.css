@@ -1,5 +1,5 @@
 /* HEADER */
-#logo{
+.logo{
     height: 40px;
     width: 40px;
     background: rgb(20, 20, 20);
@@ -10,7 +10,14 @@
     align-items: center;
     font-family: 'Jura', sans-serif;
     font-weight: 500;
+    /* transform: translate3d(0, 0, 400px) rotateY(-40deg);
+    opacity: 1;
+    transition: 2.5s all ease; */
 }
+/* .logo.hidden{
+    opacity: 0;
+} */
+
 #head-wrapper{
     width: 100vw;
     display: flex;
@@ -30,7 +37,10 @@
 
 @media (min-width: 768px){
     #head-wrapper{
-        margin: 20vh auto;
+        /* margin: 20vh auto; */
+        margin:auto;
+        margin-top: 20vh;
+        margin-bottom: 5vh;
     }
     .greeting{
         font-size: 2.5rem;
@@ -115,6 +125,9 @@ li{
         justify-content: center;
         align-items: center;
     }
+    a:hover{
+        text-decoration: none;
+    }
 }
 
 /* BODY */
@@ -130,4 +143,7 @@ body {
     color: inherit;
     cursor: pointer;
     outline: none;
+}
+a:hover{
+    text-decoration: underline;
 }

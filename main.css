@@ -144,9 +144,9 @@ a:hover{
     opacity: 0;
     -webkit-transition: opacity .5s .20s ease-out;
     transition: opacity .5s .20s ease-out;
-
+    /* transition: transform .3s ease-out; */
 }
 .is-visible{
     opacity: 1;
-    /* transform: translateX(20px); */
+    /* transform: translate(0, -50px); */
 }

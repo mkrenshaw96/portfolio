@@ -12,7 +12,6 @@ function loopy() {
     scroll(loopy);
 }
 loopy();
-// Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();
     return (

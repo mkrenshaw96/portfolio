@@ -1,27 +1,26 @@
-var scroll = window.requestAnimationFrame ||
-    function (callback) { window.setTimeout(callback, 1000 / 60) };
-var elementsToShow = document.querySelectorAll('.show-on-scroll');
-function loopy() {
-    elementsToShow.forEach(function (element) {
-        if (isElementInViewport(element)) {
-            element.classList.add('is-visible');
-        } else {
-            element.classList.remove('is-visible');
-        }
-    });
-    scroll(loopy);
+const getScroll = callback => window.setTimeout(callback, 1000 / 60)
+
+const scroll = window.requestAnimationFrame || getScroll()
+
+const elementsToShow = document.querySelectorAll('.show-on-scroll')
+
+const isElementInViewport = el => {
+  const rect = el.getBoundingClientRect()
+  return (
+    (rect.top <= 0 && rect.bottom >= 0) ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight)) ||
+    (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  )
 }
-loopy();
-function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-        (rect.top <= 0
-            && rect.bottom >= 0)
-        ||
-        (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-        ||
-        (rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-    );
-}
+
+(function loopy() {
+  elementsToShow.forEach(element => {
+    if (isElementInViewport(element)) {
+      element.classList.add('is-visible')
+    } else {
+      element.classList.remove('is-visible')
+    }
+  })
+  scroll(loopy)
+})()
